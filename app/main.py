@@ -3,7 +3,6 @@ from .models import basemodels
 
 app = FastAPI()
 
-
 @app.get("/")
 async def root():
     try:
