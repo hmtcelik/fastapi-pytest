@@ -12,7 +12,6 @@ def test_read_main():
     data = response.json()['data']
     assert data['greetings'] == "HELLO WORLD"
 
-
 def test_send_feedback():
     body = {
             "title": "I love this API",
