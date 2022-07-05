@@ -21,3 +21,13 @@ def test_send_feedback():
     assert response.status_code == 200
     assert response.json()['success'] == True
     assert response.json()['data'] != None
+
+def test_update_feedback():
+    body = {
+            "title": "Updated!",
+            "description": "Yes, this object was updated"
+            }
+    response = client.put("/feedback/1" , json=body)
+    assert response.status_code == 200
+    assert response.json()['success'] == True
+    assert response.json()['data'] != None
