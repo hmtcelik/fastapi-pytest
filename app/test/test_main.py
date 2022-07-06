@@ -1,6 +1,9 @@
 from fastapi.testclient import TestClient
 from ..main import app
 
+from httpx import AsyncClient
+import pytest
+
 client = TestClient(app)
 
 def test_read_main():
@@ -31,3 +34,10 @@ def test_update_feedback():
     assert response.status_code == 200
     assert response.json()['success'] == True
     assert response.json()['data'] != None
+
+@pytest.mark.anyio
+async def test_async_root():
+    async with AsyncClient(app=app, base_url="http://test") as ac:
+        response = await ac.get("/")
+    assert response.status_code == 200
+    assert response.json()['message'] == "ok"
