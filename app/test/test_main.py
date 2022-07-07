@@ -41,3 +41,8 @@ async def test_async_root():
         response = await ac.get("/")
     assert response.status_code == 200
     assert response.json()['message'] == "ok"
+
+def test_sql_query():
+    res = client.get("/get_sql_query/")
+    assert res.status_code == 200 
+    assert res.json()['success'] == True
