@@ -4,6 +4,7 @@
 - [x] Unit Tests
 - [ ] Integration Tests
 - [ ] E2E Tests
+- [ ] ...
 
 ### Frameworks and libraries:
 - FastAPI
