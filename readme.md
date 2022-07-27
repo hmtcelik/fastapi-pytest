@@ -1,4 +1,4 @@
-## Testing Fastapi
+# Testing Fastapi
 
 ### Test Types:
 - [x] Unit Tests
