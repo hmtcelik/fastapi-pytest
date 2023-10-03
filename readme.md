@@ -7,6 +7,7 @@
 - [ ] ...
 
 ### Frameworks and libraries:
+
 - FastAPI
 - Pytest
 - SQLAlchemy
